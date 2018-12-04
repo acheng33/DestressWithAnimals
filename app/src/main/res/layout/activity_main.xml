@@ -202,4 +202,8 @@
         app:layout_constraintTop_toBottomOf="@+id/horseList"
         app:layout_constraintVertical_bias="0.298" />
 
+<<<<<<< HEAD
 </android.support.constraint.ConstraintLayout>
+=======
+</android.support.constraint.ConstraintLayout>
+>>>>>>> 941491867f7b64322ec0124dbe492cf1f223b9cf

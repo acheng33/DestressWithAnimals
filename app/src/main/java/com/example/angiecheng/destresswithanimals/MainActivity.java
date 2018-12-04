@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("catList", "cat checked!");
             }
         });
-`
+
         Button aquaticList = (Button) findViewById(R.id.aquaticList);
         aquaticList.setOnClickListener(new View.OnClickListener() {
             @Override
