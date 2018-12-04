@@ -1,5 +1,6 @@
 package com.example.angiecheng.destresswithanimals;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -14,11 +15,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button startButton = (Button) findViewById(R.id.startButton);
+        final Button startButton = (Button) findViewById(R.id.startButton);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("start", "worked!");
+                if (view == startButton) {
+                    Intent intentMain = new Intent(MainActivity.this, ImageDisplay.class);
+                    MainActivity.this.startActivity(intentMain);
+                    Log.d("start", "worked!");
+                }
+                Log.d("start", "taken to next page!");
             }
         });
 
