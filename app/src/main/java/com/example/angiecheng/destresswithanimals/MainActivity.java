@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("previous", "I'm working!");
+                Log.d("previous", "Hello World!");
             }
         });
 
