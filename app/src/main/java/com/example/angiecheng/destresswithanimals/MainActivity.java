@@ -20,32 +20,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (view == startButton) {
-                    Intent intentMain = new Intent(MainActivity.this, ImageDisplay.class);
-                    MainActivity.this.startActivity(intentMain);
+                    Intent directToPictures = new Intent(MainActivity.this, ImageDisplay.class);
+                    MainActivity.this.startActivity(directToPictures);
                     Log.d("start", "worked!");
                 }
                 Log.d("start", "taken to next page!");
             }
         });
 
-        Button scrollBack = (Button) findViewById(R.id.scrollBack);
-        scrollBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d("previous", "I'm working!");
-                Log.d("previous", "Hello World!");
-            }
-        });
-
-        Button scrollForward = (Button) findViewById(R.id.scrollForward);
-        scrollForward.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d("next","I'm also working!");
-            }
-        });
-
-        Button dogList = (Button) findViewById(R.id.dogList);
+        final Button dogList = (Button) findViewById(R.id.dogList);
         dogList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button catList = (Button) findViewById(R.id.catList);
+        final Button catList = (Button) findViewById(R.id.catList);
         catList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button aquaticList = (Button) findViewById(R.id.aquaticList);
+        final Button aquaticList = (Button) findViewById(R.id.aquaticList);
         aquaticList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button babyAnimalList = (Button) findViewById(R.id.babyAnimalList);
+        final Button babyAnimalList = (Button) findViewById(R.id.babyAnimalList);
         babyAnimalList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button forestAnimalList = (Button) findViewById(R.id.forestAnimalList);
+        final Button forestAnimalList = (Button) findViewById(R.id.forestAnimalList);
         forestAnimalList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button smallAnimalList = (Button) findViewById(R.id.smallAnimalList);
+        final Button smallAnimalList = (Button) findViewById(R.id.smallAnimalList);
         smallAnimalList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button horseList = (Button) findViewById(R.id.horseList);
+        final Button horseList = (Button) findViewById(R.id.horseList);
         horseList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button foxList = (Button) findViewById(R.id.foxList);
+        final Button foxList = (Button) findViewById(R.id.foxList);
         foxList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
