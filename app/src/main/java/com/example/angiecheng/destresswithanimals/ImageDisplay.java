@@ -16,7 +16,7 @@ public class ImageDisplay extends AppCompatActivity {
         final Button previousPicture = (Button) findViewById(R.id.previousPicture);
         previousPicture.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View goBackOnePicture) {
                 Log.d("previousPicture", "take to previous photo");
             }
         });
@@ -24,7 +24,7 @@ public class ImageDisplay extends AppCompatActivity {
         final Button nextPicture = (Button) findViewById(R.id.nextPicture);
         nextPicture.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View goForwardOnePicture) {
                 Log.d("nextPicture", "take to next photo");
 
             }
@@ -33,8 +33,8 @@ public class ImageDisplay extends AppCompatActivity {
         final Button returnHome = (Button) findViewById(R.id.returnHome);
         returnHome.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                if (v == returnHome) {
+            public void onClick(View returnToHomeScreen) {
+                if (returnToHomeScreen == returnHome) {
                     Intent returnHome = new Intent(ImageDisplay.this, MainActivity.class);
                     ImageDisplay.this.startActivity(returnHome);
                     Log.d("return home", "returned to home screen");
@@ -46,7 +46,7 @@ public class ImageDisplay extends AppCompatActivity {
         final Button favoritePicture = (Button) findViewById(R.id.favoritePicture);
         favoritePicture.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View favoritePictureList) {
                 Log.d("favoritePicture", "picutre is favorited!");
             }
         });
