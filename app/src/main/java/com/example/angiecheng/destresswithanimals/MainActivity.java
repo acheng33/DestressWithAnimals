@@ -91,5 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("foxList", "fox list checked!");
             }
         });
+
+
     }
 }

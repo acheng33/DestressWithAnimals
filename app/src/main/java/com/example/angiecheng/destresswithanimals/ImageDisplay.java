@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class ImageDisplay extends AppCompatActivity {
     @Override
@@ -27,6 +28,8 @@ public class ImageDisplay extends AppCompatActivity {
             public void onClick(View goForwardOnePicture) {
                 Log.d("nextPicture", "take to next photo");
 
+                ImageView testDisplayImage = (ImageView) findViewById(R.id.displayPhoto);
+                testDisplayImage.setImageResource(R.drawable.test1);
             }
         });
 
