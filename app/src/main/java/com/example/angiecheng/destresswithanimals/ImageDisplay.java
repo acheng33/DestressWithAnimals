@@ -20,7 +20,10 @@ public class ImageDisplay extends AppCompatActivity {
         previousPicture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View goBackOnePicture) {
-                Log.d("previousPicture", "take to previous photo");
+                i--;
+                int previousPhotoID = getBaseContext().getResources().getIdentifier("test" + i, "drawable", getBaseContext().getPackageName());
+                ImageView testDisplayPrevious = (ImageView) findViewById(R.id.displayPhoto);
+                testDisplayPrevious.setImageResource(previousPhotoID);
             }
         });
 
@@ -28,9 +31,9 @@ public class ImageDisplay extends AppCompatActivity {
         nextPicture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View goForwardOnePicture) {
-                int id = getBaseContext().getResources().getIdentifier("test" + i, "drawable", getBaseContext().getPackageName());
-                ImageView testDisplayImage = (ImageView) findViewById(R.id.displayPhoto);
-                testDisplayImage.setImageResource(id);
+                int nextPhotoID = getBaseContext().getResources().getIdentifier("test" + i, "drawable", getBaseContext().getPackageName());
+                ImageView testDisplayNext = (ImageView) findViewById(R.id.displayPhoto);
+                testDisplayNext.setImageResource(nextPhotoID);
                 i++;
             }
         });
