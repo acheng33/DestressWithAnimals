@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class ImageDisplay extends AppCompatActivity {
-    int i = 1;
+    int drawableCounter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +20,10 @@ public class ImageDisplay extends AppCompatActivity {
         previousPicture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View goBackOnePicture) {
-                i--;
-
-                int previousPhotoID = getBaseContext().getResources().getIdentifier("test" + i, "drawable", getBaseContext().getPackageName());
+                drawableCounter--;
+                int previousPhotoID = getBaseContext().getResources().getIdentifier("test" + drawableCounter,
+                        "drawable", getBaseContext().getPackageName());
+                System.out.println(drawableCounter);
                 ImageView testDisplayPrevious = (ImageView) findViewById(R.id.displayPhoto);
                 testDisplayPrevious.setImageResource(previousPhotoID);
             }
@@ -32,10 +33,12 @@ public class ImageDisplay extends AppCompatActivity {
         nextPicture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View goForwardOnePicture) {
-                int nextPhotoID = getBaseContext().getResources().getIdentifier("test" + i, "drawable", getBaseContext().getPackageName());
+                drawableCounter++;
                 ImageView testDisplayNext = (ImageView) findViewById(R.id.displayPhoto);
+                int nextPhotoID = getBaseContext().getResources().getIdentifier("test" + drawableCounter,
+                        "drawable", getBaseContext().getPackageName());
                 testDisplayNext.setImageResource(nextPhotoID);
-                i++;
+                System.out.println(drawableCounter);
             }
         });
 
