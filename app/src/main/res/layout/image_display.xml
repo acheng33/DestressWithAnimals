@@ -80,7 +80,7 @@
 
     <ImageView
         android:id="@+id/displayPhoto"
-        android:layout_width="332dp"
+        android:layout_width="464dp"
         android:layout_height="459dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"

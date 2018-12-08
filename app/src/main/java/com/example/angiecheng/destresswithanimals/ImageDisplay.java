@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class ImageDisplay extends AppCompatActivity {
+    int i = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +28,10 @@ public class ImageDisplay extends AppCompatActivity {
         nextPicture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View goForwardOnePicture) {
-                Log.d("nextPicture", "take to next photo");
-
+                int id = getBaseContext().getResources().getIdentifier("test" + i, "drawable", getBaseContext().getPackageName());
                 ImageView testDisplayImage = (ImageView) findViewById(R.id.displayPhoto);
-                testDisplayImage.setImageResource(R.drawable.test1);
+                testDisplayImage.setImageResource(id);
+                i++;
             }
         });
 
