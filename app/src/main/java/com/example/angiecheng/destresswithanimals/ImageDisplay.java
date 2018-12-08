@@ -21,6 +21,7 @@ public class ImageDisplay extends AppCompatActivity {
             @Override
             public void onClick(View goBackOnePicture) {
                 i--;
+
                 int previousPhotoID = getBaseContext().getResources().getIdentifier("test" + i, "drawable", getBaseContext().getPackageName());
                 ImageView testDisplayPrevious = (ImageView) findViewById(R.id.displayPhoto);
                 testDisplayPrevious.setImageResource(previousPhotoID);
