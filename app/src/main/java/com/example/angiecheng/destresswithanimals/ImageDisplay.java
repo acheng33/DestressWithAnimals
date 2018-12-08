@@ -23,7 +23,6 @@ public class ImageDisplay extends AppCompatActivity {
                 drawableCounter--;
                 int previousPhotoID = getBaseContext().getResources().getIdentifier("test" + drawableCounter,
                         "drawable", getBaseContext().getPackageName());
-                System.out.println(drawableCounter);
                 ImageView testDisplayPrevious = (ImageView) findViewById(R.id.displayPhoto);
                 testDisplayPrevious.setImageResource(previousPhotoID);
             }
@@ -38,7 +37,6 @@ public class ImageDisplay extends AppCompatActivity {
                 int nextPhotoID = getBaseContext().getResources().getIdentifier("test" + drawableCounter,
                         "drawable", getBaseContext().getPackageName());
                 testDisplayNext.setImageResource(nextPhotoID);
-                System.out.println(drawableCounter);
             }
         });
 
