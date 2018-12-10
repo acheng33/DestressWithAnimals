@@ -1,69 +1,81 @@
 package com.example.angiecheng.destresswithanimals;
 
+import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONObject;
+
 public class ImageDisplay extends AppCompatActivity {
+    final String URL = "https://dog.ceo/api/breeds/image/random";
     int drawableCounter = 0;
 
+    MediaPlayer musicPlayer;
+    ImageView imageView;
+    Button returnHome;
+    RequestQueue queue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final Context ctx = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.image_display);
+        imageView = findViewById(R.id.displayPhoto);
+        returnHome = findViewById(R.id.returnHome);
 
-        final Button previousPicture = (Button) findViewById(R.id.previousPicture);
-        previousPicture.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View goBackOnePicture) {
-                drawableCounter--;
-                if (drawableCounter < 1) {
-                    drawableCounter = 20;
-                }
-                int previousPhotoID = getBaseContext().getResources().getIdentifier("test" + drawableCounter,
-                        "drawable", getBaseContext().getPackageName());
-                ImageView testDisplayPrevious = (ImageView) findViewById(R.id.displayPhoto);
-                testDisplayPrevious.setImageResource(previousPhotoID);
-            }
-        });
+        queue = Volley.newRequestQueue(this);
 
-        final Button nextPicture = (Button) findViewById(R.id.nextPicture);
-        nextPicture.setOnClickListener(new View.OnClickListener() {
+        musicPlayer = MediaPlayer.create(ImageDisplay.this, R.raw.song3);
+        musicPlayer.setLooping(true);
+        musicPlayer.start();
+
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View goForwardOnePicture) {
-                drawableCounter++;
-                if (drawableCounter > 20) {
-                    drawableCounter = drawableCounter % 20;
-                }
-                ImageView testDisplayNext = (ImageView) findViewById(R.id.displayPhoto);
-                int nextPhotoID = getBaseContext().getResources().getIdentifier("test" + drawableCounter,
-                        "drawable", getBaseContext().getPackageName());
-                testDisplayNext.setImageResource(nextPhotoID);
+
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            Log.d("APP", response.toString());
+                            DownloadImageTask d = new DownloadImageTask(imageView);
+                            d.execute(response.getString("message"));
+                        } catch (Exception e) {
+                            Log.e("APP", e.toString());
+                        }
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("APP", error.toString());
+                    }
+                });
+                queue.add(jsonObjectRequest);
             }
         });
-
-        MediaPlayer playMusic = MediaPlayer.create(ImageDisplay.this, R.raw.song3);
-        playMusic.start();
-
-        final Button returnHome = (Button) findViewById(R.id.returnHome);
         returnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View returnToHomeScreen) {
                 if (returnToHomeScreen == returnHome) {
+                    musicPlayer.stop();
                     Intent returnHome = new Intent(ImageDisplay.this, MainActivity.class);
                     ImageDisplay.this.startActivity(returnHome);
                 }
-                MediaPlayer playMusic = MediaPlayer.create(ImageDisplay.this, R.raw.song3);
-                playMusic.stop();
             }
         });
-
-
 
     }
 }
