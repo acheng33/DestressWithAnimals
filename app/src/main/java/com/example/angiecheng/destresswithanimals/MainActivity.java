@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("start", "worked!");
                 }
                 Log.d("start", "taken to next page!");
-                MediaPlayer testPlayBack = MediaPlayer.create(R.raw.);
+                MediaPlayer testPlayBack = MediaPlayer.create(MainActivity.this, R.raw.song2);
+                testPlayBack.start();
             }
         });
 
@@ -93,6 +94,9 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("foxList", "fox list checked!");
             }
         });
+
+        MediaPlayer testPlayBack = MediaPlayer.create(MainActivity.this, R.raw.song2);
+        testPlayBack.start();
 
     }
 }
