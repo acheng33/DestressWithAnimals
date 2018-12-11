@@ -53,8 +53,8 @@ public class ImageDisplay extends AppCompatActivity {
                             Log.d("APP", response.toString());
                             DownloadImageTask d = new DownloadImageTask(imageView);
                             d.execute(response.getString("message"));
-                        } catch (Exception e) {
-                            Log.e("APP", e.toString());
+                        } catch (Exception error) {
+                            Log.e("APP", error.toString());
                         }
                     }
                 }, new Response.ErrorListener() {
