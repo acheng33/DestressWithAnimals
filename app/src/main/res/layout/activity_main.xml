@@ -17,7 +17,7 @@
         android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -26,13 +26,19 @@
         android:id="@+id/homeImage"
         android:layout_width="245dp"
         android:layout_height="170dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.043"
-        app:srcCompat="@drawable/test11"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.089"
+        app:srcCompat="@drawable/test11" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -40,55 +46,64 @@
         android:layout_height="336dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="124dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193"
         app:srcCompat="@drawable/test16" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="127dp"
         android:layout_height="273dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="248dp"
         android:layout_marginRight="248dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.456"
         app:srcCompat="@drawable/test14" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="335dp"
         android:layout_height="176dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginLeft="140dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042"
+        app:layout_constraintVertical_bias="0.089"
         app:srcCompat="@drawable/test17" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="171dp"
         android:layout_height="117dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="224dp"
-        android:layout_marginRight="224dp"
+        android:layout_marginEnd="216dp"
+        android:layout_marginRight="216dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.798"
+        app:layout_constraintVertical_bias="0.838"
         app:srcCompat="@drawable/test6" />
 
     <ImageView
@@ -102,7 +117,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.811"
+        app:layout_constraintVertical_bias="0.858"
         app:srcCompat="@drawable/test20" />
 
 
