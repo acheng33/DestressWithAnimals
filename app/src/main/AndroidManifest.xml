@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".ImageDisplay" android:noHistory="true">
         </activity>
+        <activity android:name=".ChecklistScreen" android:noHistory="true">
+        </activity>
     </application>
 
 </manifest>

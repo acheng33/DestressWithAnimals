@@ -7,6 +7,6 @@ public class ChecklistScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.checklist_screen);
+        setContentView(R.layout.checklists);
     }
 }
