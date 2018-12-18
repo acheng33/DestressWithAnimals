@@ -21,7 +21,6 @@ import org.json.JSONObject;
 
 public class ImageDisplay extends AppCompatActivity {
     final String URL = "https://dog.ceo/api/breeds/image/random";
-    int drawableCounter = 0;
 
     MediaPlayer musicPlayer;
     ImageView imageView;
