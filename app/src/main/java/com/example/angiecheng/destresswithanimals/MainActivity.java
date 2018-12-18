@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View startDisplay) {
                 if (startDisplay == startButton) {
-                    Intent directToPictures = new Intent(MainActivity.this, ImageDisplay.class);
-                    MainActivity.this.startActivity(directToPictures);
+                    Intent directToChecklistScreen = new Intent(MainActivity.this, ChecklistScreen.class);
+                    MainActivity.this.startActivity(directToChecklistScreen);
                     Log.d("start", "worked!");
                 }
                 Log.d("start", "taken to next page!");

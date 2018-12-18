@@ -24,13 +24,13 @@
 
     <ImageView
         android:id="@+id/homeImage"
-        android:layout_width="199dp"
+        android:layout_width="245dp"
         android:layout_height="170dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.15"
         app:srcCompat="@drawable/test11"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -40,7 +40,7 @@
         android:layout_height="336dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="176dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,27 +54,27 @@
         android:layout_width="127dp"
         android:layout_height="273dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="260dp"
-        android:layout_marginRight="260dp"
+        android:layout_marginEnd="252dp"
+        android:layout_marginRight="252dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436"
+        app:layout_constraintVertical_bias="0.548"
         app:srcCompat="@drawable/test14" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="316dp"
+        android:layout_width="335dp"
         android:layout_height="176dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginLeft="148dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.154"
         app:srcCompat="@drawable/test17" />
 
     <ImageView
